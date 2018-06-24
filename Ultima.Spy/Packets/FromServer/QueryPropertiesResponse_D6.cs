@@ -33,7 +33,7 @@ namespace Ultima.Spy.Packets
 			_Properties = new List<QueryPropertiesProperty>();
 			int cliloc;
 
-			while ( ( cliloc = reader.ReadInt32() ) != 0 )
+			while ( ( cliloc = reader.ReadInt32() ) >= 0 )
 				_Properties.Add( new QueryPropertiesProperty( cliloc, reader ) );
 		}
 	}
